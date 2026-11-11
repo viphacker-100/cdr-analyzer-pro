@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
     <title>CDR Analyzer Pro</title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Crect x='4' y='4' width='120' height='120' rx='28' fill='%231E40AF'/%3E%3Crect x='24' y='80' width='14' height='24' rx='4' fill='%233B82F6' fill-opacity='.45'/%3E%3Crect x='46' y='70' width='14' height='34' rx='4' fill='%233B82F6' fill-opacity='.55'/%3E%3Crect x='68' y='62' width='14' height='42' rx='4' fill='%2360A5FA' fill-opacity='.45'/%3E%3Crect x='90' y='54' width='14' height='50' rx='4' fill='%2360A5FA' fill-opacity='.55'/%3E%3Cpath d='M85 20A21 21 0 0 1 104 39' fill='none' stroke='%23FBBF24' stroke-width='5' stroke-linecap='round'/%3E%3Cpath d='M31 74L60 46L94 35' fill='none' stroke='%23FFF' stroke-width='7' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M60 46L93 80' fill='none' stroke='%2393C5FD' stroke-width='6' stroke-linecap='round'/%3E%3Ccircle cx='31' cy='74' r='8.5' fill='%23FFF' stroke='%231E3A8A' stroke-width='2.5'/%3E%3Ccircle cx='94' cy='35' r='8' fill='%2360A5FA' stroke='%23FFF' stroke-width='2.5'/%3E%3Ccircle cx='93' cy='80' r='8' fill='%23FFF' stroke='%233B82F6' stroke-width='2.5'/%3E%3Ccircle cx='60' cy='46' r='12' fill='%231E3A8A'/%3E%3Ccircle cx='60' cy='46' r='9.5' fill='%23F59E0B'/%3E%3Ccircle cx='60' cy='46' r='3.2' fill='%23FFF'/%3E%3C/svg%3E"
+    />
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"
       integrity="sha384-rf/ztXfEY2pet3f+/ISCMJDpNcNxQ7yx3pe4GtfOe32+0cj6XARNKeKbbj4KGpND"
@@ -229,8 +234,11 @@
     gap: 10px;
   }
 
-  .header-title i {
-    color: #fbbf24;
+  .header-logo-mark {
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+    display: block;
   }
 
   .header-subtitle {
@@ -1316,7 +1324,41 @@
       <div class="header-content">
         <div>
           <div class="header-title">
-            <i class="fas fa-chart-line" aria-hidden="true"></i> CDR Analyzer Pro
+            <svg
+              class="header-logo-mark"
+              width="30"
+              height="30"
+              viewBox="0 0 128 128"
+              aria-hidden="true"
+            >
+              <defs>
+                <linearGradient id="header-cdr-bg" x1="8" y1="8" x2="120" y2="120" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#1E3A8A" />
+                  <stop offset="100%" stop-color="#1E40AF" />
+                </linearGradient>
+                <linearGradient id="header-cdr-amber" x1="54" y1="36" x2="74" y2="56" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#FBBF24" />
+                  <stop offset="100%" stop-color="#D97706" />
+                </linearGradient>
+              </defs>
+              <rect x="4" y="4" width="120" height="120" rx="28" fill="url(#header-cdr-bg)" />
+              <rect x="5" y="5" width="118" height="118" rx="27" fill="none" stroke="#3B82F6" stroke-opacity="0.55" stroke-width="2.5" />
+              <rect x="24" y="80" width="14" height="24" rx="4" fill="#3B82F6" fill-opacity="0.42" />
+              <rect x="46" y="70" width="14" height="34" rx="4" fill="#3B82F6" fill-opacity="0.52" />
+              <rect x="68" y="62" width="14" height="42" rx="4" fill="#60A5FA" fill-opacity="0.42" />
+              <rect x="90" y="54" width="14" height="50" rx="4" fill="#60A5FA" fill-opacity="0.5" />
+              <path d="M 85 20 A 21 21 0 0 1 104 39" fill="none" stroke="#FBBF24" stroke-width="4.5" stroke-linecap="round" stroke-opacity="0.95" />
+              <path d="M 88 12 A 30 30 0 0 1 112 36" fill="none" stroke="#93C5FD" stroke-width="4" stroke-linecap="round" stroke-opacity="0.8" />
+              <path d="M 31 74 L 60 46 L 94 35" fill="none" stroke="#FFFFFF" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M 60 46 L 93 80" fill="none" stroke="#93C5FD" stroke-width="5.5" stroke-linecap="round" />
+              <circle cx="31" cy="74" r="8.5" fill="#FFFFFF" stroke="#1E3A8A" stroke-width="2.5" />
+              <circle cx="94" cy="35" r="8" fill="#60A5FA" stroke="#FFFFFF" stroke-width="2.5" />
+              <circle cx="93" cy="80" r="8" fill="#FFFFFF" stroke="#3B82F6" stroke-width="2.5" />
+              <circle cx="60" cy="46" r="12" fill="#1E3A8A" />
+              <circle cx="60" cy="46" r="9.5" fill="url(#header-cdr-amber)" />
+              <circle cx="60" cy="46" r="3.2" fill="#FFFFFF" />
+            </svg>
+            CDR Analyzer Pro
           </div>
           <div class="header-subtitle">
             Advanced Call Detail Record Analysis Tool

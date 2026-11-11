@@ -1,4 +1,10 @@
-# 📊 CDR Analyzer Pro
+<p align="center">
+  <a href="https://github.com/viphacker-100/cdr-analyzer-pro">
+    <img src="assets/logo.svg" alt="CDR Analyzer Pro Logo" width="560" />
+  </a>
+</p>
+
+# CDR Analyzer Pro
 
 A powerful web-based Call Detail Record (CDR) analysis tool designed for telecom investigators, law enforcement, and network analysts. This application provides comprehensive analysis of call data from multiple telecom operators with advanced visualization and reporting capabilities.
 
@@ -72,6 +78,11 @@ A powerful web-based Call Detail Record (CDR) analysis tool designed for telecom
 ```
 cdr-analyzer-pro/
 ├── index.html                        # Main application file (single-file offline-capable UI)
+├── assets/                           # Brand logo lockups & icon marks (SVG & PNG)
+│   ├── logo.svg                      # Horizontal brand banner SVG
+│   ├── logo-mark.svg                 # Standalone square vector emblem
+│   ├── logo.png                      # High-DPI banner PNG preview
+│   └── logo-mark.png                 # High-DPI square icon PNG
 ├── demo_cdr_vi.csv                   # VI operator demo data (20 records)
 ├── demo_cdr_jio.csv                  # Jio operator demo data (21 records)
 ├── demo_cdr_bsnl.csv                 # BSNL operator demo data (32 records)
