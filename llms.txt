@@ -1,0 +1,30 @@
+# CDR Analyzer Pro
+
+> Offline-first web application for parsing, filtering, correlating, visualizing, and exporting telecom Call Detail Records (CDR) and SMS logs directly in the browser without uploading files to any server.
+
+CDR Analyzer Pro supports Vodafone Idea (VI), Jio, Airtel (including VoWiFi formats), BSNL CSV datasets, binary XLS/XLSX workbooks, nested/encrypted ZIP archives, local IndexedDB v3 IMEI TAC and TRAI DLT SMS header resolution, D3 network relationship graphs, interactive Chart.js analytics, and formatted Excel exports.
+
+## Primary Pages
+
+- [CDR Analyzer Pro Application](https://viphacker-100.github.io/cdr-analyzer-pro/): Main single-file browser workspace for CDR upload, filtering, analysis sub-tabs, offline reference DB management, and Excel export.
+- [Custom 404 Page](https://viphacker-100.github.io/cdr-analyzer-pro/404.html): Fallback error page with breadcrumb recovery and direct links back to workspace sections.
+
+## Documentation & Specifications
+
+- [Project README](https://github.com/viphacker-100/cdr-analyzer-pro/blob/main/README.md): Overview, installation steps, security/privacy model, version history, and feature guide.
+- [Demo Files Guide](https://github.com/viphacker-100/cdr-analyzer-pro/blob/main/README_DEMO_FILES.md): Field structure and column expectations for included operator sample files.
+- [Design System Specification](https://github.com/viphacker-100/cdr-analyzer-pro/blob/main/design-system/cdr-analyzer-pro/MASTER.md): UI tokens, color palette, typography, and component contrast rules.
+- [MIT License](https://github.com/viphacker-100/cdr-analyzer-pro/blob/main/LICENSE): Open-source license terms.
+
+## Sample Operator Datasets
+
+- [Vodafone Idea (VI) Sample CSV](https://viphacker-100.github.io/cdr-analyzer-pro/demo_cdr_vi.csv): 20 sample synthetic VI call records.
+- [Reliance Jio Sample CSV](https://viphacker-100.github.io/cdr-analyzer-pro/demo_cdr_jio.csv): 21 sample synthetic Jio call records.
+- [BSNL Sample CSV](https://viphacker-100.github.io/cdr-analyzer-pro/demo_cdr_bsnl.csv): 32 sample synthetic BSNL call records.
+- [SMS Analysis Sample CSV](https://viphacker-100.github.io/cdr-analyzer-pro/demo_cdr_sms.csv): 36 sample synthetic SMS header records.
+
+## Machine-Readable Discovery
+
+- [XML Sitemap](https://viphacker-100.github.io/cdr-analyzer-pro/sitemap.xml)
+- [Robots Policy](https://viphacker-100.github.io/cdr-analyzer-pro/robots.txt)
+

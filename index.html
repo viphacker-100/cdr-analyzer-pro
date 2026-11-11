@@ -4,7 +4,105 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
-    <title>CDR Analyzer Pro</title>
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#1e3a8a" />
+    <title>CDR Analyzer Pro | Call Detail Record Analysis Tool</title>
+    <meta
+      name="description"
+      content="Analyze telecom Call Detail Records (VI, Jio, Airtel, BSNL) offline in your browser with interactive call graphs, IMEI/SMS lookup, filters, and Excel exports."
+    />
+    <link rel="canonical" href="https://viphacker-100.github.io/cdr-analyzer-pro/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="CDR Analyzer Pro" />
+    <meta property="og:title" content="CDR Analyzer Pro | Call Detail Record Analysis Tool" />
+    <meta
+      property="og:description"
+      content="Analyze telecom Call Detail Records (VI, Jio, Airtel, BSNL) offline in your browser with interactive call graphs, IMEI/SMS lookup, filters, and Excel exports."
+    />
+    <meta property="og:url" content="https://viphacker-100.github.io/cdr-analyzer-pro/" />
+    <meta
+      property="og:image"
+      content="https://viphacker-100.github.io/cdr-analyzer-pro/assets/social-preview.png"
+    />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="CDR Analyzer Pro logo and offline-first Call Detail Record analytics dashboard preview"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="CDR Analyzer Pro | Call Detail Record Analysis Tool" />
+    <meta
+      name="twitter:description"
+      content="Analyze telecom Call Detail Records (VI, Jio, Airtel, BSNL) offline in your browser with interactive call graphs, IMEI/SMS lookup, filters, and Excel exports."
+    />
+    <meta
+      name="twitter:image"
+      content="https://viphacker-100.github.io/cdr-analyzer-pro/assets/social-preview.png"
+    />
+    <meta
+      name="twitter:image:alt"
+      content="CDR Analyzer Pro logo and offline-first Call Detail Record analytics dashboard preview"
+    />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "SoftwareApplication",
+            "name": "CDR Analyzer Pro",
+            "applicationCategory": "UtilitiesApplication",
+            "operatingSystem": "Any (Web Browser)",
+            "softwareVersion": "2.1",
+            "url": "https://viphacker-100.github.io/cdr-analyzer-pro/",
+            "image": "https://viphacker-100.github.io/cdr-analyzer-pro/assets/social-preview.png",
+            "description": "Offline-first web application to parse, filter, visualize, and export telecom Call Detail Records (VI, Jio, Airtel, BSNL) locally inside the browser.",
+            "codeRepository": "https://github.com/viphacker-100/cdr-analyzer-pro",
+            "license": "https://github.com/viphacker-100/cdr-analyzer-pro/blob/main/LICENSE",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD"
+            },
+            "author": {
+              "@type": "Person",
+              "name": "Aryan Ahirwar",
+              "alternateName": "viphacker-100",
+              "url": "https://github.com/viphacker-100"
+            },
+            "publisher": {
+              "@id": "https://viphacker-100.github.io/cdr-analyzer-pro/#organization"
+            }
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://viphacker-100.github.io/cdr-analyzer-pro/#organization",
+            "name": "viphacker-100",
+            "url": "https://github.com/viphacker-100/cdr-analyzer-pro",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://viphacker-100.github.io/cdr-analyzer-pro/assets/logo-mark.png"
+            },
+            "sameAs": [
+              "https://github.com/viphacker-100",
+              "https://github.com/viphacker-100/cdr-analyzer-pro"
+            ]
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "CDR Analyzer Pro",
+                "item": "https://viphacker-100.github.io/cdr-analyzer-pro/"
+              }
+            ]
+          }
+        ]
+      }
+    </script>
     <link
       rel="icon"
       type="image/svg+xml"
@@ -38,8 +136,8 @@
       referrerpolicy="no-referrer"
     ></script>
     <script
-      src="https://cdn.jsdelivr.net/npm/@zip.js/zip.js@2.7.57/dist/zip.js"
-      integrity="sha384-s8MCPVnECq6z9sZglmCVdzGPtPRLpX057byXlVsInY5Ni1BmP2016X4oouQAOGhe"
+      src="https://cdn.jsdelivr.net/npm/@zip.js/zip.js@2.7.57/dist/zip.min.js"
+      integrity="sha384-41wmJg/BLJdYhmeyC7vw119LW+lIqrkbV/RCU+jv6HztGLBrDTiE+RkoBgujeQ3J"
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
@@ -225,6 +323,8 @@
   }
 
   .header-title {
+    margin: 0;
+    line-height: 1.25;
     font-family: var(--font-mono);
     font-size: 1.35rem;
     font-weight: 600;
@@ -272,6 +372,91 @@
     text-decoration: none;
   }
 
+  .workspace-nav-bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px 18px;
+    padding-bottom: 14px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid var(--color-border);
+    font-size: 13px;
+  }
+
+  .breadcrumb-nav,
+  .section-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    color: var(--color-muted-foreground);
+  }
+
+  .breadcrumb-nav a,
+  .section-links a,
+  .guide-section a {
+    color: var(--chart-btn);
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .breadcrumb-nav a:hover,
+  .section-links a:hover,
+  .guide-section a:hover {
+    text-decoration: underline;
+  }
+
+  .guide-section {
+    max-width: 1280px;
+    margin: 0 auto 18px;
+    padding: 20px;
+    background: var(--color-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .guide-section h2 {
+    font-family: var(--font-mono);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-card-foreground);
+    margin-bottom: 12px;
+  }
+
+  .guide-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 14px;
+  }
+
+  .guide-card {
+    background: var(--surface-row-alt);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 14px 16px;
+    font-size: 13px;
+    line-height: 1.55;
+    color: var(--color-card-foreground);
+  }
+
+  .guide-card h3 {
+    font-family: var(--font-mono);
+    font-size: 0.88rem;
+    margin-bottom: 6px;
+    color: var(--color-card-foreground);
+  }
+
+  .guide-card p {
+    color: var(--color-muted-foreground);
+    margin-bottom: 8px;
+  }
+
+  .guide-card p:last-child {
+    margin-bottom: 0;
+  }
+
   .app-footer {
     max-width: 1400px;
     margin: 0 auto 24px;
@@ -282,7 +467,7 @@
   }
 
   .app-footer a {
-    color: var(--color-primary);
+    color: var(--chart-btn);
     text-decoration: none;
     font-weight: 500;
   }
@@ -1320,10 +1505,10 @@
   </head>
   <body>
    
-    <header>
+    <header id="top">
       <div class="header-content">
         <div>
-          <div class="header-title">
+          <h1 class="header-title">
             <svg
               class="header-logo-mark"
               width="30"
@@ -1359,7 +1544,7 @@
               <circle cx="60" cy="46" r="3.2" fill="#FFFFFF" />
             </svg>
             CDR Analyzer Pro
-          </div>
+          </h1>
           <div class="header-subtitle">
             Advanced Call Detail Record Analysis Tool
           </div>
@@ -1507,15 +1692,33 @@
       </form>
     </dialog>
 
-    <div class="container">
+    <main id="main-content" class="container">
+      <div class="workspace-nav-bar">
+        <nav aria-label="Breadcrumb" class="breadcrumb-nav">
+          <a href="#top">CDR Analyzer Pro</a>
+          <span aria-hidden="true">/</span>
+          <span aria-current="page">Analysis Workspace</span>
+        </nav>
+        <nav aria-label="Workspace sections" class="section-links">
+          <a href="#upload-section">Upload</a>
+          <span aria-hidden="true">·</span>
+          <a href="#filters-section">Filters &amp; Charts</a>
+          <span aria-hidden="true">·</span>
+          <a href="#table-container">Results Table</a>
+          <span aria-hidden="true">·</span>
+          <a href="#workspace-guide">Operators &amp; Guide</a>
+        </nav>
+      </div>
+
+      <section id="upload-section" aria-label="CDR File Upload">
       <div class="file-upload-area" id="fileUploadArea">
         <div class="upload-icon">
-          <i class="fas fa-cloud-upload-alt"></i>
+          <i class="fas fa-cloud-upload-alt" aria-hidden="true"></i>
         </div>
         <div class="upload-text">Drag &amp; Drop Files Here</div>
         <div class="upload-hint">or click to browse (CSV, XLS, XLSX, ZIP)</div>
         <label for="file-input" class="file-input-label">
-          <i class="fas fa-folder-open"></i> Choose Files
+          <i class="fas fa-folder-open" aria-hidden="true"></i> Choose Files
         </label>
         <input
           type="file"
@@ -1524,6 +1727,7 @@
           multiple
         />
       </div>
+      </section>
 
       <div class="dropdown">
         <button type="button" onclick="toggleDropdown()" class="dropbtn">
@@ -1553,18 +1757,19 @@
       <hr class="divider" />
 
       <!-- Enhanced filter buttons -->
+      <section id="filters-section" aria-label="Call Filters and Charts">
       <div style="text-align: center; margin: 30px 0;">
         <button type="button" onclick="filterByCallType('Incoming')" class="filter-btn incoming">
-          <i class="fas fa-arrow-down"></i> Incoming Calls
+          <i class="fas fa-arrow-down" aria-hidden="true"></i> Incoming Calls
         </button>
         <button type="button" onclick="filterByCallType('Outgoing')" class="filter-btn outgoing">
-          <i class="fas fa-arrow-up"></i> Outgoing Calls
+          <i class="fas fa-arrow-up" aria-hidden="true"></i> Outgoing Calls
         </button>
         <button type="button" onclick="showCallDurationChart()" class="filter-btn chart">
-          <i class="fas fa-chart-pie"></i> Duration Chart
+          <i class="fas fa-chart-pie" aria-hidden="true"></i> Duration Chart
         </button>
         <button type="button" onclick="showCallTimeChart()" class="filter-btn chart">
-          <i class="fas fa-clock"></i> Time Analysis
+          <i class="fas fa-clock" aria-hidden="true"></i> Time Analysis
         </button>
       </div>
 
@@ -1598,6 +1803,7 @@
           </button>
         </div>
       </div>
+      </section>
 
     <div id="table-container" tabindex="0" role="region" aria-label="CDR Analysis Results">
       <div id="table-data">
@@ -1607,16 +1813,47 @@
       </div>
       <div class="scroll-buttons">
           <button type="button" id="scroll-up" title="Scroll to Top" aria-label="Scroll to Top">
-            <i class="fas fa-chevron-up"></i>
+            <i class="fas fa-chevron-up" aria-hidden="true"></i>
           </button>
           <button type="button" id="scroll-down" title="Scroll to Bottom" aria-label="Scroll to Bottom">
-            <i class="fas fa-chevron-down"></i>
+            <i class="fas fa-chevron-down" aria-hidden="true"></i>
           </button>
         </div>
       </div>
-    </div>
+    </main>
+
+    <section id="workspace-guide" class="guide-section" aria-labelledby="guide-heading">
+      <h2 id="guide-heading">Supported CDR Formats &amp; Offline Privacy Guide</h2>
+      <div class="guide-grid">
+        <article class="guide-card">
+          <h3>Supported Operators &amp; Files</h3>
+          <p>
+            Automatically parses Vodafone Idea (VI), Jio, Airtel (including VoWiFi), BSNL, and SMS header logs in CSV, XLS, XLSX, or nested/encrypted ZIP archives.
+          </p>
+          <p><a href="#upload-section">Jump to file upload &uarr;</a></p>
+        </article>
+        <article class="guide-card">
+          <h3>100% Local Processing</h3>
+          <p>
+            Records are parsed inside browser memory. IMEI TAC and SMS DLT headers resolve offline via built-in decoders and IndexedDB v3 without third-party servers.
+          </p>
+          <p><a href="#filters-section">Jump to filters &amp; charts &uarr;</a></p>
+        </article>
+        <article class="guide-card">
+          <h3>Analysis Views &amp; Exports</h3>
+          <p>
+            Inspect 14 correlation views including B-Party frequency, Common IMEI, Night/Day stay, D3 Network Graph, and formatted multi-sheet Excel workbooks.
+          </p>
+          <p><a href="#table-container">Jump to results table &uarr;</a></p>
+        </article>
+      </div>
+    </section>
 
     <footer class="app-footer">
+      <a href="#top">Top</a> ·
+      <a href="#upload-section">Upload</a> ·
+      <a href="#filters-section">Filters</a> ·
+      <a href="#workspace-guide">Operators &amp; Guide</a> ·
       <a href="https://github.com/viphacker-100/cdr-analyzer-pro" target="_blank" rel="noopener noreferrer">
         <i class="fab fa-github" aria-hidden="true"></i> CDR Analyzer Pro on GitHub
       </a>
@@ -6357,7 +6594,6 @@
           case "Day Stay":
             return processStayTypeExportData(data, subTab);
           default:
-            console.log("Unknown sub-tab:", subTab);
             return null;
         }
       }

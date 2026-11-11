@@ -78,11 +78,16 @@ A powerful web-based Call Detail Record (CDR) analysis tool designed for telecom
 ```
 cdr-analyzer-pro/
 ├── index.html                        # Main application file (single-file offline-capable UI)
-├── assets/                           # Brand logo lockups & icon marks (SVG & PNG)
+├── 404.html                          # Custom 404 fallback page with breadcrumb navigation
+├── sitemap.xml                       # Search engine sitemap
+├── robots.txt                        # Crawler directives & sitemap reference
+├── llms.txt                          # Machine-readable project summary for AI tools
+├── assets/                           # Brand logos & social share assets (SVG & PNG)
 │   ├── logo.svg                      # Horizontal brand banner SVG
 │   ├── logo-mark.svg                 # Standalone square vector emblem
 │   ├── logo.png                      # High-DPI banner PNG preview
-│   └── logo-mark.png                 # High-DPI square icon PNG
+│   ├── logo-mark.png                 # High-DPI square icon PNG
+│   └── social-preview.png            # Open Graph / Twitter social card (1200x630)
 ├── demo_cdr_vi.csv                   # VI operator demo data (20 records)
 ├── demo_cdr_jio.csv                  # Jio operator demo data (21 records)
 ├── demo_cdr_bsnl.csv                 # BSNL operator demo data (32 records)
